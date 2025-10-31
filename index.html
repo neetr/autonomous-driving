@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autonomous Vehicle & Road Safety Analysis Project</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
 
     <header>
         <h1><span class="emoji">🚗</span> Autonomous Vehicle & Road Safety Analysis</h1>
-        <p>This project addresses two crucial components of modern transport: developing a **real-time vehicle detection AI** for Intelligent Transport Systems (ITS) and conducting a **data-driven analysis of autopilot usage and its effect on road safety**.</p>
+        <p>This project addresses two crucial components of modern transport: developing a <b>real-time vehicle detection AI</b> for Intelligent Transport Systems (ITS) and conducting a <b>data-driven analysis of autopilot usage and its effect on road safety</b>.</p>
     </header>
 
     <hr>
@@ -19,10 +19,10 @@
         <h2>Part 1: Vehicle Detection and Localization (ITS Core)</h2>
 
         <h3>Objective</h3>
-        <p>The goal was to create a deep learning model to perform **Object Detection**—specifically, predicting the **type of vehicle** (classification) and identifying its location with a **bounding box** (localization). This capability is foundational for vehicle tracking and incident response.</p>
+        <p>The goal was to create a deep learning model to perform **Object Detection**—specifically, predicting the <b>type of vehicle</b> (classification) and identifying its location with a **bounding box** (localization). This capability is foundational for vehicle tracking and incident response.</p>
 
         <h3>Methodology: YOLO Object Detection</h3>
-        <p>We employed the **YOLO (You Only Look Once)** framework. A training subset of **500 images** was used to manage resources, ensuring all required object categories were represented.</p>
+        <p>We employed the <b>YOLO (You Only Look Once)</b> framework. A training subset of <b>500 images</b> was used to manage resources, ensuring all required object categories were represented.</p>
 
         <h3>Results and Performance</h3>
         <table>
@@ -52,7 +52,7 @@
         </p>
 
         <h3>Conclusion on Part 1</h3>
-        <p>The model achieved **strong object localization** but showed weaknesses in **vehicle classification**. This is primarily attributed to the **limited 500-image training dataset**. Future work will involve using a larger dataset to improve classification accuracy.</p>
+        <p>The model achieved <b>strong object localization</b> but showed weaknesses in <b>vehicle classification</b>. This is primarily attributed to the <b>limited 500-image training dataset</b>. Future work will involve using a larger dataset to improve classification accuracy.</p>
     </div>
 
     <hr>
@@ -65,9 +65,9 @@
 
         <h3>Data Cleaning Highlights</h3>
         <ul>
-            <li>Missing Data marked as **"-" (Unknown)** were encoded as **-1**.</li>
+            <li>Missing Data marked as <b>"-" (Unknown)</b> were encoded as <b>-1</b>.</li>
             <li>Extra whitespace was removed from column names and values.</li>
-            <li>A reliable **`Date_Year`** column was engineered to replace the inconsistent original `Year` column.</li>
+            <li>A reliable <b>`Date_Year`</b> column was engineered to replace the inconsistent original <b>`Year`</b> column.</li>
         </ul>
 
         <h3>Key Conclusions</h3>
