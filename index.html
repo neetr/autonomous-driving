@@ -1,22 +1,110 @@
-/* Include css file */
 <!DOCTYPE html>
-  
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="app.css">
-  </head>
-  <body>
-    <h1>Data Science, ML, DL & GenAI Projects</h1>
-    <div>
-      <p>As part of my ongoing Professional Certificate Course in Generative AI and Machine Learning from IIT Kanpur and Simplilearn,
-        I have worked on a number of Projects. Have provided details of the same below: </p>
-        <ul>
-          <li>Project 1: <a href="./data_science_sales.html">Sales Analysis using Python, Pandas, Matplotlib and Seaborn libraries</a></li>
-          <li>Project 2: Sentiment Analysis of Social Media Posts</li>
-          <li>Project 3: Image Classification using Deep Learning</li>
-          <li>Project 4: Generative AI for Text Generation</li>
-        </ul>
-        <p>For more details, please visit my <a href="https://www.linkedin.com/in/neet-reddy">LinkedIn Profile</a></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Vehicle & Road Safety Analysis Project</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <h1><span class="emoji">🚗</span> Autonomous Vehicle & Road Safety Analysis</h1>
+        <p>This project addresses two crucial components of modern transport: developing a **real-time vehicle detection AI** for Intelligent Transport Systems (ITS) and conducting a **data-driven analysis of autopilot usage and its effect on road safety**.</p>
+    </header>
+
+    <hr>
+
+    <div class="container">
+        <h2>Part 1: Vehicle Detection and Localization (ITS Core)</h2>
+
+        <h3>Objective</h3>
+        <p>The goal was to create a deep learning model to perform **Object Detection**—specifically, predicting the **type of vehicle** (classification) and identifying its location with a **bounding box** (localization). This capability is foundational for vehicle tracking and incident response.</p>
+
+        <h3>Methodology: YOLO Object Detection</h3>
+        <p>We employed the **YOLO (You Only Look Once)** framework. A training subset of **500 images** was used to manage resources, ensuring all required object categories were represented.</p>
+
+        <h3>Results and Performance</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Result</th>
+                    <th>Interpretation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$\text{mAP}@0.5$</td>
+                    <td>0.413</td>
+                    <td><strong>Good Localization.</strong> The model successfully places bounding boxes around vehicles.</td>
+                </tr>
+                <tr>
+                    <td>$\text{mAP}@0.5:0.95$</td>
+                    <td>0.302</td>
+                    <td><strong>Poor Classification/Precision.</strong> The model struggles to accurately classify the vehicle type while maintaining high bounding box precision.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="project-link-p">
+            <a href="./path/to/part1/code" class="project-link">View Part 1 Code/Notebook</a>
+        </p>
+
+        <h3>Conclusion on Part 1</h3>
+        <p>The model achieved **strong object localization** but showed weaknesses in **vehicle classification**. This is primarily attributed to the **limited 500-image training dataset**. Future work will involve using a larger dataset to improve classification accuracy.</p>
     </div>
-  </body>
+
+    <hr>
+
+    <div class="container">
+        <h2>Part 2: Autopilot Usage and Road Safety Analysis</h2>
+
+        <h3>Objective</h3>
+        <p>To analyze real-world data concerning autopilot usage to identify accident patterns and data reporting issues.</p>
+
+        <h3>Data Cleaning Highlights</h3>
+        <ul>
+            <li>Missing Data marked as **"-" (Unknown)** were encoded as **-1**.</li>
+            <li>Extra whitespace was removed from column names and values.</li>
+            <li>A reliable **`Date_Year`** column was engineered to replace the inconsistent original `Year` column.</li>
+        </ul>
+
+        <h3>Key Conclusions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Finding</th>
+                    <th>Detail</th>
+                    <th>Implication</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accident Peak</td>
+                    <td>Most accidents occurred in the year <strong>2022</strong>.</td>
+                    <td>May indicate increased system usage or a reporting spike.</td>
+                </tr>
+                <tr>
+                    <td>Geographic Hub</td>
+                    <td>Most accidents occurred in <strong>CA, USA</strong> (California).</td>
+                    <td>Consistent with California being a primary location for AV testing.</td>
+                </tr>
+                <tr>
+                    <td>Data Limitation</td>
+                    <td>The most frequent vehicle involved was <strong>Tesla Model -1 (Unknown)</strong>.</td>
+                    <td><strong>Critical Finding:</strong> Highlights a major issue of **missing vehicle model data**, limiting specific safety analysis.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="project-link-p">
+            <a href="./path/to/part2/code" class="project-link">View Part 2 Code/Notebook</a>
+        </p>
+
+        <h3>Overall Conclusion on Part 2</h3>
+        <p class="key-conclusion">The high prevalence of "Unknown" data for the vehicle model is the most significant finding. Effective safety analysis requires **standardized and complete reporting** mechanisms to accurately link incidents to specific vehicle models and autopilot systems.</p>
+    </div>
+
+</body>
 </html>
