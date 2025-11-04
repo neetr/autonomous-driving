@@ -19,11 +19,13 @@
         <h2>Part 1: Vehicle Detection and Localization (ITS Core)</h2>
 
         <h3>Objective</h3>
-        <p>The goal was to create a deep learning model to perform **Object Detection**—specifically, predicting the <b>type of vehicle</b> (classification) and identifying its location with a **bounding box** (localization). This capability is foundational for vehicle tracking and incident response.</p>
+        <p>The goal was to create a deep learning model to perform <b>Object Detection</b>—specifically, predicting the <b>type of vehicle</b> (classification) and identifying its location with a <b>bounding box</b> (localization). This capability is foundational for vehicle tracking and incident response.</p>
 
         <h3>Methodology: YOLO Object Detection</h3>
         <p>We employed the <b>YOLO (You Only Look Once)</b> framework. A training subset of <b>500 images</b> was used to manage resources, ensuring all required object categories were represented.</p>
-
+        <p>
+            <img src="process_flow_part1.png" alt="YOLO Architecture" class="responsive-image"/>
+        </p>
         <h3>Results and Performance</h3>
         <table>
             <thead>
@@ -35,12 +37,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>$\text{mAP}@0.5$</td>
+                    <td>mAP@0.5</td>
                     <td>0.413</td>
                     <td><strong>Good Localization.</strong> The model successfully places bounding boxes around vehicles.</td>
                 </tr>
                 <tr>
-                    <td>$\text{mAP}@0.5:0.95$</td>
+                    <td>mAP@0.5:0.95</td>
                     <td>0.302</td>
                     <td><strong>Poor Classification/Precision.</strong> The model struggles to accurately classify the vehicle type while maintaining high bounding box precision.</td>
                 </tr>
@@ -48,7 +50,7 @@
         </table>
 
         <p class="project-link-p">
-            <a href="./path/to/part1/code" class="project-link">View Part 1 Code/Notebook</a>
+            <a href="AutonomousDriving_Part1.ipynb" class="project-link">View Part 1 Code/Notebook</a>
         </p>
 
         <h3>Conclusion on Part 1</h3>
@@ -62,7 +64,9 @@
 
         <h3>Objective</h3>
         <p>To analyze real-world data concerning autopilot usage to identify accident patterns and data reporting issues.</p>
-
+        <p>
+            <img src="process_flow_part2.png" alt="Data Processing Flow" class="responsive-image"/>
+        </p>
         <h3>Data Cleaning Highlights</h3>
         <ul>
             <li>Missing Data marked as <b>"-" (Unknown)</b> were encoded as <b>-1</b>.</li>
@@ -93,17 +97,17 @@
                 <tr>
                     <td>Data Limitation</td>
                     <td>The most frequent vehicle involved was <strong>Tesla Model -1 (Unknown)</strong>.</td>
-                    <td><strong>Critical Finding:</strong> Highlights a major issue of **missing vehicle model data**, limiting specific safety analysis.</td>
+                    <td><strong>Critical Finding:</strong> Highlights a major issue of <b>missing vehicle model data</b>, limiting specific safety analysis.</td>
                 </tr>
             </tbody>
         </table>
 
         <p class="project-link-p">
-            <a href="./path/to/part2/code" class="project-link">View Part 2 Code/Notebook</a>
+            <a href="AutonomousDriving_Part2.ipynb" class="project-link">View Part 2 Code/Notebook</a>
         </p>
 
         <h3>Overall Conclusion on Part 2</h3>
-        <p class="key-conclusion">The high prevalence of "Unknown" data for the vehicle model is the most significant finding. Effective safety analysis requires **standardized and complete reporting** mechanisms to accurately link incidents to specific vehicle models and autopilot systems.</p>
+        <p class="key-conclusion">The high prevalence of "Unknown" data for the vehicle model is the most significant finding. Effective safety analysis requires <b>standardized and complete reporting</b> mechanisms to accurately link incidents to specific vehicle models and autopilot systems.</p>
     </div>
 
 </body>
