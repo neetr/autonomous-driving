@@ -24,7 +24,7 @@
         <h3>Methodology: YOLO Object Detection</h3>
         <p>We employed the <b>YOLO (You Only Look Once)</b> framework. A training subset of <b>500 images</b> was used to manage resources, ensuring all required object categories were represented.</p>
         <p>
-            <img src="process_flow_part1.png" alt="YOLO Architecture" class="responsive-image"/>
+            <img src="images/process_flow_part1.png" alt="YOLO Architecture" class="responsive-image"/>
         </p>
         <h3>Results and Performance</h3>
         <table>
@@ -61,7 +61,7 @@
         <h3>Objective</h3>
         <p>To analyze real-world data concerning autopilot usage to identify accident patterns and data reporting issues.</p>
         <p>
-            <img src="process_flow_part2.png" alt="Data Processing Flow" class="responsive-image"/>
+            <img src="images/process_flow_part2.png" alt="Data Processing Flow" class="responsive-image"/>
         </p>
         <h3>Data Cleaning Highlights</h3>
         <ul>
@@ -69,6 +69,44 @@
             <li>Extra whitespace was removed from column names and values.</li>
             <li>A reliable <b>`Date_Year`</b> column was engineered to replace the inconsistent original <b>`Year`</b> column.</li>
         </ul>
+    <section class="section">
+        <h3>Key Insights</h3>
+        <div class="kpi-row">
+            <div class="kpi">
+            <div class="kpi-text">
+                <h3>Accidents by Year and State</h3>
+                <p>Most accidents occurred in <strong>2022</strong>, primarily in <strong>California</strong>.</p>
+            </div>
+            <img src="images/accidents_year_state.png" alt="Accidents by Year and State" class="kpi-image" />
+            </div>
+
+            <div class="kpi">
+            <div class="kpi-text">
+                <h3>Accidents by Model</h3>
+                <p><strong>Model S</strong> was involved in the most accidents.</p>
+            </div>
+            <img src="images/accidents_by_model.png" alt="Accidents by Model" class="kpi-image" />
+            </div>
+        </div>
+
+        <div class="kpi-row">
+            <div class="kpi">
+            <div class="kpi-text">
+                <h3>Percentage of accidents with Tesla Occupants Deathr</h3>
+                <p><strong>82.3% cases</strong> did not involve occupants death.</p>
+            </div>
+            <img src="images/percentage_accidents.png" alt="Percentage of Tesla Occupants Death" class="kpi-image" />
+            </div>
+
+            <div class="kpi">
+            <div class="kpi-text">
+                <h3>Density curve of Cyclists/Pedestrians being hit by vehicle</h3>
+                <p>Majority of accidents involved <strong>0 Cyclists/Pedestrians</strong>.</p>
+            </div>
+            <img src="images/density.png" alt="Density Curve" class="kpi-image" />
+            </div>
+        </div>
+        </section>
 
         <h3>Key Conclusions</h3>
         <table>

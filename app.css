@@ -69,6 +69,79 @@ ul {
     padding-left: 20px;
 }
 
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+  font-size: 1.4rem;
+}
+
+.section ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.diagram-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.diagram-container img {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.kpi {
+  background: linear-gradient(90deg, #ecfeff, #f0fdfa);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-text h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.kpi-text p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.kpi-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 8px;
+  object-fit: contain;
+}
+
+
 /* Project Links Styling */
 .project-link-p {
     text-align: center;
